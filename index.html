@@ -24,12 +24,26 @@
                     <a href="#" class="fa__form_icon"><i class="fa-solid fa-pen-to-square "></i></a>
                     <a href="#" class="fa__form_icon fa__form_icon_trash"><i class="fa-solid fa-trash"></i></a>
                 </div>
-            </div>
+            </div></div>
+    </div>
+    <button class="btn modal-btn modal-trigger"><i class="fa-solid fa-plus"></i></button>
 
-            <div class="todo__Container_add">
-                <button class="btn" id="addBtn"><i class="fa-solid fa-plus"></i></button>
+<!-- Creation du modal d'ajout d'un items-->
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+        
+        <div class="modal">
+            <h3>New item</h3>
+            <div class="modal__input">
+                <input type="text" for="items__Title" placeholder="Titre de votre tâche">
+            </div>
+            <div class="modal__manageBtn">
+                <button class="btn modal__btn modal__btn-Close">Cancel</button>
+                <button class="btn modal__btn modal-__btnAdd">Add</button>
             </div>
         </div>
     </div>
+    
+
 </body>
 </html>

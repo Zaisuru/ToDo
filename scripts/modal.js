@@ -1,6 +1,3 @@
-//document.getElementById("addBtn").addEventListener("click", function() {
-  //  alert("Hello");
-//});
 const modalContainer = document.querySelector(".modal-container");
 const modalTrigger = document.querySelectorAll(".modal-trigger");
 
