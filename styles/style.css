@@ -1,0 +1,58 @@
+*{
+    background-color: #F7F7F7;
+}
+
+h1{
+    margin-top: 0.5em;
+    font-family: inter;
+    font-weight: bold;
+    text-align: center;
+}
+#toDo__Container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.todo__Container_row{
+    display: flex;
+    padding: 0.8em;
+    width: 50%;
+    justify-content:space-between;
+    border-bottom: 1px solid #6C63FF;
+}
+label{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+input[type=checkbox]{
+    width: 1em;
+    height: 1em;
+}
+
+
+.fa__form_icon{
+    margin-left: 0.5em;
+    color: #6C63FF;
+}
+.fa__form_icon:hover{
+    background-color: white;
+}
+.fa__form_icon_trash:hover{
+    color: red;
+}
+
+.todo__Container_add{
+    padding: 2em;
+}
+
+.fa-plus{
+    background-color: #6C63FF;
+    border-radius: 50%;
+    padding: 0.5em;
+    color: white;
+}
+.fa-plus:hover{
+    cursor: pointer;
+    background-color: #534CC2;
+}

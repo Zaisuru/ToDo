@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/addItems.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/88ce417d72.js" crossorigin="anonymous"></script>
+    <title>ToDo list en Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO List</h1>
+
+        <div id="toDo__Container">
+            <div class="todo__Container_row">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault"> Default checkbox </label>
+                </div>
+                <div class="form-icon">
+                    <a href="#" class="fa__form_icon"><i class="fa-solid fa-pen-to-square "></i></a>
+                    <a href="#" class="fa__form_icon fa__form_icon_trash"><i class="fa-solid fa-trash"></i></a>
+                </div>
+            </div>
+
+            <div class="todo__Container_add">
+                <button class="btn" id="addBtn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
