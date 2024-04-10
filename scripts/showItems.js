@@ -1,4 +1,4 @@
-const response = await fetch('.:items.json');
+const response = await fetch('scripts/items.json');
 const items =  await response.json();
 // Create Dom 
 const toDoContainer = document.getElementById("toDo__Container");
