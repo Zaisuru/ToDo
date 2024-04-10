@@ -69,6 +69,7 @@ input[type=checkbox]{
 .modal-container.active{
     display: block;
 }
+
 .overlay{
     position: absolute;
     width: 100%;

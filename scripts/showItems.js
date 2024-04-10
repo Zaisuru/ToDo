@@ -1,4 +1,5 @@
-//require json
+const response = await fetch('.:items.json');
+const items =  await response.json();
 // Create Dom 
 const toDoContainer = document.getElementById("toDo__Container");
 const containerRow = document.createElement("div");
@@ -18,15 +19,16 @@ formInput.classList.add("form-check-input");
 formLabel.classList.add("form-check-label");
 formIcon.classList.add("form-icon");
 linkEdit.classList.add("fa__form_icon");
-iconEdit.classList.add("fa-solid", "fa-pen-to-square")
+iconEdit.classList.add("fa-solid", "fa-pen-to-square", "modal-trigger")
 linkTrash.classList.add("fa__form_icon", "fa__form_icon_trash");
 iconTrash.classList.add("fa-solid", "fa-trash");
 
 // Add attribute
 formInput.setAttribute("type", "checkbox");
+iconEdit.setAttribute("id", "test");
 linkEdit.setAttribute("href", "#");
 linkTrash.setAttribute("href","#")
-formLabel.textContent= "Salut";
+formLabel.textContent = "Salut";
 
 // Display items
 toDoContainer.appendChild(containerRow);
