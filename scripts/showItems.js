@@ -1,5 +1,9 @@
 const response = await fetch('scripts/items.json');
 const items =  await response.json();
+
+const itemsElem = items[0];
+
+console.log(itemsElem);
 // Create Dom 
 const toDoContainer = document.getElementById("toDo__Container");
 const containerRow = document.createElement("div");
