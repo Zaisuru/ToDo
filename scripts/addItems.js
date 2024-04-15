@@ -7,7 +7,7 @@ const itemsTitle= document.querySelector(".items__Title");
 btnAdd.addEventListener("click", addItems);
 
 function addItems(){
-    console.log(itemsTitle.value);
-
+    const itemsTitleValue = itemsTitle.value; 
+    console.log("salut")
     hideModal();
 }
