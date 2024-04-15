@@ -1,4 +1,4 @@
-const response = await fetch('scripts/items.json');
+const response = await fetch('../backend/items.json');
 const items =  await response.json();
 
 if(items.length == 0){
@@ -36,7 +36,7 @@ console.log(items.length)
         iconEdit.setAttribute("id", "test");
         linkEdit.setAttribute("href", "#");
         linkTrash.setAttribute("href","#")
-        formLabel.textContent = items[i].nom;
+        formLabel.textContent = items[i].title;
 
         // Display items
         toDoContainer.appendChild(containerRow);
