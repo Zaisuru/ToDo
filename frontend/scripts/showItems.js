@@ -1,15 +1,19 @@
 const response = await fetch('../backend/items.json');
 const items =  await response.json();
 
+const toDoContainer = document.getElementById("toDo__Container");
+
 if(items.length == 0){
-    console.log("Aucune données dans le fichier");
     const img = document.createElement("img");
+    img.classList.add("emptyItems");
+    img.setAttribute("src","pictures/NoItems.png");
+    img.setAttribute("alt", "Empty items");
+    toDoContainer.appendChild(img);
 }
 
 console.log(items.length)
 
     for(let i=0 ; i < items.length; i++){
-        const toDoContainer = document.getElementById("toDo__Container");
         const containerRow = document.createElement("div");
         const formCheck = document.createElement("div");
         const formInput = document.createElement("input");
