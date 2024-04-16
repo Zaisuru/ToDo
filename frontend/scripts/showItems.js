@@ -1,8 +1,12 @@
+import { showModalUpdate } from "./updateItems.js";
+import { showModalRemove } from "./removeItems.js"
+
 const response = await fetch('../backend/items.json');
 const items =  await response.json();
 
-const toDoContainer = document.getElementById("toDo__Container");
 
+
+/* check if items empy */
 if(items.length == 0){
     const img = document.createElement("img");
     img.classList.add("emptyItems");
@@ -10,10 +14,8 @@ if(items.length == 0){
     img.setAttribute("alt", "Empty items");
     toDoContainer.appendChild(img);
 }
-
-console.log(items.length)
-
     for(let i=0 ; i < items.length; i++){
+        const toDoContainer = document.getElementById("toDo__Container");
         const containerRow = document.createElement("div");
         const formCheck = document.createElement("div");
         const formInput = document.createElement("input");
@@ -24,22 +26,19 @@ console.log(items.length)
         const linkTrash = document.createElement("a");
         const iconTrash = document.createElement("i");
 
-        // Add Class
         containerRow.classList.add("todo__Container_row");
         formCheck.classList.add("form-check");
         formInput.classList.add("form-check-input");
         formLabel.classList.add("form-check-label");
         formIcon.classList.add("form-icon");
-        linkEdit.classList.add("fa__form_icon");
-        iconEdit.classList.add("fa-solid", "fa-pen-to-square", "modal-trigger")
-        linkTrash.classList.add("fa__form_icon", "fa__form_icon_trash", "btnRemove");
+        linkEdit.classList.add("fa__form_icon", "btnModalUpdate", "modal-trigger");
+        iconEdit.classList.add("fa-solid", "fa-pen-to-square")
+        linkTrash.classList.add("fa__form_icon", "fa__form_icon_trash", "btnModalDelete", "modal-trigger");
         iconTrash.classList.add("fa-solid", "fa-trash");
 
-        // Add attribute
         formInput.setAttribute("type", "checkbox");
-        iconEdit.setAttribute("id", "test");
-        linkEdit.setAttribute("href", "#");
-        linkTrash.setAttribute("href","#")
+        linkTrash.setAttribute("href","#");
+        linkTrash.setAttribute("href","#");
         formLabel.textContent = items[i].title;
 
         // Display items
@@ -49,7 +48,11 @@ console.log(items.length)
         formCheck.appendChild(formLabel);
         containerRow.appendChild(formIcon);
         formIcon.appendChild(linkEdit);
-        linkEdit.appendChild(iconEdit);0
+        linkEdit.appendChild(iconEdit);
         formIcon.appendChild(linkTrash);
         linkTrash.appendChild(iconTrash);
-    }
+
+    };
+    
+    showModalUpdate();
+    showModalRemove();
