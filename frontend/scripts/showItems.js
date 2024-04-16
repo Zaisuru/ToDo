@@ -6,6 +6,7 @@ const items =  await response.json();
 
 
 
+const toDoContainer = document.getElementById("toDo__Container");
 /* check if items empy */
 if(items.length == 0){
     const img = document.createElement("img");
@@ -13,9 +14,8 @@ if(items.length == 0){
     img.setAttribute("src","pictures/NoItems.png");
     img.setAttribute("alt", "Empty items");
     toDoContainer.appendChild(img);
-}
+}else{
     for(let i=0 ; i < items.length; i++){
-        const toDoContainer = document.getElementById("toDo__Container");
         const containerRow = document.createElement("div");
         const formCheck = document.createElement("div");
         const formInput = document.createElement("input");
@@ -39,7 +39,7 @@ if(items.length == 0){
         formInput.setAttribute("type", "checkbox");
         linkEdit.setAttribute("href","#");
         linkTrash.setAttribute("href","#");
-        linkEdit.setAttribute("id", items[i].title);
+        linkEdit.setAttribute("id", items[i].title)
         formLabel.textContent = items[i].title;
 
         // Display items
@@ -57,3 +57,4 @@ if(items.length == 0){
     
     showModalUpdate();
     showModalRemove();
+}

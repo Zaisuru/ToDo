@@ -1,7 +1,17 @@
+const modalContainer= document.getElementById("modalAdd");
+const modalTrigger = document.getElementById("btnModalAdd");
+const btnClose = modalContainer.querySelector(".modal__btn-Close");
 
-// node modules
+modalTrigger.addEventListener("click", displayModal);
 
-// json file 
+btnClose.addEventListener("click", hideModal);
+
+function displayModal(){
+    modalContainer.classList.toggle("active");
+}
+function hideModal(){
+    modalContainer.classList.remove("active");
+}
 
 // Create Item
 const btnAdd = document.querySelector(".modal__btn-Add");
@@ -11,9 +21,6 @@ btnAdd.addEventListener("click", addItems);
 
 function addItems(){
     const itemsTitleValue = itemsTitle.value; 
-    items.push(itemsTitleValue);
-    fs.writeFile("items.json"), JSON.stringify(items), err =>{
-        if (err) throw err;
+    console.log(itemsTitleValue);
         hideModal();
     }
-}

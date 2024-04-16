@@ -13,7 +13,6 @@ export function showModalRemove (){
     });
 
     btnClose.addEventListener("click", hideModal);
-
 }
 
 function modalUpdate(){
