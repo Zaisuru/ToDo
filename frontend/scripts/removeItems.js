@@ -1,21 +1,26 @@
 // Display-Hide modal
-import { hideModal } from "./modal.js";
+
 // Create Item
-const modalContainerUpdate= document.getElementById("modalDelete");
+const modalContainer= document.getElementById("modalDelete");
+const btnClose = modalContainer.querySelector(".modal__btn-Close");
 
 export function showModalRemove (){
 
     const modalTriggers = document.querySelectorAll(".btnModalDelete");
-    const btnClose = document.querySelector(".modal__btn-Close");
 
     modalTriggers.forEach(trigger => {
         trigger.addEventListener("click", modalUpdate);
     });
 
     btnClose.addEventListener("click", hideModal);
+
 }
 
 function modalUpdate(){
     console.log("Salut");
-    modalContainerUpdate.classList.toggle("active");
+    modalContainer.classList.toggle("active");
+}
+
+function hideModal(){
+    modalContainer.classList.remove("active");
 }

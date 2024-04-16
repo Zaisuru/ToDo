@@ -37,8 +37,9 @@ if(items.length == 0){
         iconTrash.classList.add("fa-solid", "fa-trash");
 
         formInput.setAttribute("type", "checkbox");
+        linkEdit.setAttribute("href","#");
         linkTrash.setAttribute("href","#");
-        linkTrash.setAttribute("href","#");
+        linkEdit.setAttribute("id", items[i].title);
         formLabel.textContent = items[i].title;
 
         // Display items

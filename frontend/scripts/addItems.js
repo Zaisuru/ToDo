@@ -1,5 +1,3 @@
-// Display-Hide modal
-import { hideModal } from "./modal.js";
 
 // node modules
 
